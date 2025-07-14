@@ -7,5 +7,5 @@ function marlin:pwd-listener --on-variable PWD
 end
 
 if status --is-interactive
-  expand-word -p '^,.*$' -e marlin:complete
+  expand-word --pattern '^,.*$' --expander marlin:complete
 end
